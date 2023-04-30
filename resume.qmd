@@ -1,0 +1,70 @@
+---
+format: 
+    pdf:
+        template: resume_template.tex
+        font: Open Sans
+        number-sections: false
+name: Morgan Squire, ACAS
+title: Data Scientist
+summary: An innovative and fast-learning professional with 6 years of experience with a track record for modernizing and automating analytical processes.
+contact:
+    - Location: Tampa, FL
+    - Phone: (555) 555-5555
+    - Email: first.last@domain.com
+    - LinkedIn: https://www.linkedin.com/in/yournamehere/
+    - GitHub: https://github.com/githubhandle
+skills:
+    - Languages:
+        - Python
+        - R
+        - SQL
+        - Latex
+        - Markdown
+        - YAML
+    - Development Tools:
+        - Git
+        - VSCode
+        - Rstudio
+        - JupyterLab
+        - Conda
+    - Statistical Modeling:
+        - Generalized Linear Modeling
+        - Generalized Additive Modeling
+        - Downsampling/Upweighting
+        - Regularization
+        - Tree-Based Machine Learning
+    - Other:
+        - Bash
+        - Unit Testing
+        - Quarto
+---
+# Experience
+
+## USAA: 2017 - Present
+
+### Associate Actuary: 2020 - Present
+
+* Oversaw the creation of new data assets to support the implementation of new rating factors
+* Researched the effect of down-sampling on GLM hypothesis tests and the calculation of the dispersion parameter
+* Led a team of 4 in the development of an internal Python package using H2O and scikit-learn
+* Reduced model fit times by 50% by implementing a model pipeline cache
+* Mentored Data Scientists and Actuaries on Python package development to include unit testing, documentation, website publishing, logging, debugging, and git branching strategies.
+* Designed and delivered 6 hours of interactive training for a team of 12 model developers including a tutorial Git repository that covered Python, Git, H2O and an internal model development Python package
+* Provisioned 14 virtual machines to enable a team of model developers to fit models on a 40 GB dataset in H2O
+* Presented complex technical improvements to executive leadership on multiple occasions
+
+### Actuarial Analyst: 2017 - 2020
+
+* Developed an advanced process for territorial smoothing that incorporated thin plate splines in a Generalized Additive Model in R
+* Coordinated with the Texas Department of Insurance to secure approval of a new capital allocation strategy
+* Designed an R package with tools for connecting to internal databases and routine tasks for pricing analysts
+* Trained the modeling community of practice on R package development tailored to internal systems
+* Overhauled the Homeowners loss models to incorporate claim type into the surcharge to reduced subsidy
+* Optimized deductible rating factors by creating an R function to calculate the loss elimination ratios at a granular level that could be iterated on rapidly
+* Filed several rate changes in Homeowners, Renters, and Rental Property lines of business
+
+# Education
+
+### Bachelor of Science in Applied Mathematics: December 2016
+
+University of Evansville, Summa Cum Laude

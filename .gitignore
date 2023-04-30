@@ -1,0 +1,9 @@
+# byproducts of rendering resume.qmd
+resume_template.aux
+resume_template.fdb_latexmk
+resume_template.fls
+resume_template.ipynb
+resume_template.log
+
+# If you can't bother to title it, you don't get to commit it
+Untitled*

@@ -1,0 +1,109 @@
+\documentclass[10pt]{article}
+
+% Set margins
+\usepackage[left=0.5in,right=0.5in,top=0.5in,bottom=0.5in]{geometry}
+
+% Define colors
+\usepackage{xcolor}
+\definecolor{darkblue}{HTML}{003366}
+\definecolor{lightblue}{HTML}{0077b3}
+
+% Define section heading style
+\usepackage{titlesec}
+\titleformat{\section}{\Large\bfseries\color{darkblue}}{}{0em}{}[\titlerule]
+
+% Using Open Sans as an approximation to Helvetica
+\usepackage{fontspec}
+\setmainfont{$font$}
+
+% Hyperlinks
+\usepackage{hyperref}
+
+% Turn off section numbering
+\setcounter{secnumdepth}{0}
+
+% Need StrBefore and StrBehind to split subsection and subsubsection arg
+\usepackage{xstring}
+
+% custom subsection command that first arg on left and second arg on right
+\let\oldsubsection\subsection
+\newcommand{\customsubsection}[2]{
+    \oldsubsection*{\makebox[0.75\textwidth][l]{#1}%
+        \hfill%
+        \makebox[0.25\textwidth][r]{#2}%
+    }
+}
+% take subsection command and split the argument on the colon to pass into customsubsection
+\renewcommand{\subsection}[1]{
+    \StrBefore{#1}{:}[\companyname]%
+    \StrBehind{#1}{:}[\daterange]%
+    \customsubsection{\companyname}{\daterange}
+}
+
+% custom subsubsection command that first arg on left and second arg on right
+\let\oldsubsubsection\subsubsection
+\newcommand{\customsubsubsection}[2]{
+    \oldsubsubsection*{\makebox[0.75\textwidth][l]{#1}%
+        \hfill%
+        \makebox[0.25\textwidth][r]{#2}%
+    }
+}
+% take subsubsection command and split the argument on the colon to pass into customsubsubsection
+\renewcommand{\subsubsection}[1]{
+    \StrBefore{#1}{:}[\companyname]%
+    \StrBehind{#1}{:}[\daterange]%
+    \customsubsubsection{\companyname}{\daterange}
+}
+
+\providecommand{\tightlist}{%
+    \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\setlength{\parindent}{0pt}
+
+% Set the hyphen penalties to discourage hyphenation
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+
+% Remove page numbers
+\pagenumbering{gobble}
+
+\begin{document}
+
+% Header
+{\Huge \textbf{$name$}}
+
+{\Large \textcolor{lightblue}{$title$}}
+
+$if(summary)$
+{\normalsize $summary$}
+$endif$
+
+\bigskip
+
+% Contact information
+\begin{tabular}{r l}
+    $for(contact)$
+        $for(contact/pairs)$
+        \textbf{$contact.key$} & $contact.value$
+        $endfor$
+        $sep$\\
+    $endfor$
+\end{tabular}
+
+\section*{Skills}
+\begin{tabular}{*{$skills/length$}{c}}
+    $for(skills)$
+        $for(skills/pairs)$
+            \begin{tabular}[t]{l}
+                \textbf{$skills.key$}\\
+                $for(skills.value)$
+                    $it$ $sep$\\
+                $endfor$
+            \end{tabular}
+        $endfor$
+    $endfor$
+\end{tabular}
+
+$body$
+
+\end{document}
