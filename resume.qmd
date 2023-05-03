@@ -8,23 +8,22 @@ name: Morgan Squire, ACAS
 title: Data Scientist
 summary: An innovative and fast-learning professional with 6 years of experience with a track record for modernizing and automating analytical processes.
 contact:
-    - Location: Tampa, FL
+    - Location: Riverview, FL
     - Phone: (555) 555-5555
     - Email: first.last@domain.com
-    - LinkedIn: https://www.linkedin.com/in/yournamehere/
-    - GitHub: https://github.com/githubhandle
+portfolio:
+    - LinkedIn: \href{https://www.linkedin.com/in/yournamehere/}{yournamehere}
+    - GitHub: \href{https://github.com/githubhandle}{githubhandle}
 skills:
     - Languages:
         - Python
         - R
         - SQL
         - Latex
-        - Markdown
-        - YAML
     - Development Tools:
         - Git
         - VSCode
-        - Rstudio
+        - RStudio
         - JupyterLab
         - Conda
     - Statistical Modeling:
@@ -33,35 +32,46 @@ skills:
         - Downsampling/Upweighting
         - Regularization
         - Tree-Based Machine Learning
-    - Other:
-        - Bash
+    - Data:
+        - Hive
+        - Parquet
+        - Snowflake
+        - Partitioning
+        - JSON
+    - Package Development:
         - Unit Testing
-        - Quarto
+        - Docstrings/Roxygen
+        - Logging
+        - Debugging
+        - Markdown
 ---
 # Experience
 
-## USAA: 2017 - Present
+## USAA: 2016 - Present
 
 ### Associate Actuary: 2020 - Present
 
-* Oversaw the creation of new data assets to support the implementation of new rating factors
-* Researched the effect of down-sampling on GLM hypothesis tests and the calculation of the dispersion parameter
+* Overhauled the Homeowners loss models to incorporate claim type into the surcharge to reduce subsidy
 * Led a team of 4 in the development of an internal Python package using H2O and scikit-learn
 * Reduced model fit times by 50% by implementing a model pipeline cache
 * Mentored Data Scientists and Actuaries on Python package development to include unit testing, documentation, website publishing, logging, debugging, and git branching strategies.
 * Designed and delivered 6 hours of interactive training for a team of 12 model developers including a tutorial Git repository that covered Python, Git, H2O and an internal model development Python package
-* Provisioned 14 virtual machines to enable a team of model developers to fit models on a 40 GB dataset in H2O
+* Established 14 virtual machines to enable a team of model developers to fit models on a 40 GB dataset in H2O
 * Presented complex technical improvements to executive leadership on multiple occasions
 
 ### Actuarial Analyst: 2017 - 2020
 
 * Developed an advanced process for territorial smoothing that incorporated thin plate splines in a Generalized Additive Model in R
 * Coordinated with the Texas Department of Insurance to secure approval of a new capital allocation strategy
-* Designed an R package with tools for connecting to internal databases and routine tasks for pricing analysts
+* Designed and published an R package with tools for connecting to internal databases and routine tasks for pricing analysts
 * Trained the modeling community of practice on R package development tailored to internal systems
-* Overhauled the Homeowners loss models to incorporate claim type into the surcharge to reduced subsidy
-* Optimized deductible rating factors by creating an R function to calculate the loss elimination ratios at a granular level that could be iterated on rapidly
-* Filed several rate changes in Homeowners, Renters, and Rental Property lines of business
+* Optimized deductible rating factors by writing an R function to calculate the loss elimination ratios at a granular level and enabling the rollout of new deductible options
+* Filed many rate changes in Homeowners, Renters, and Rental Property lines of business
+
+### Actuarial Modeling Intern: 2016
+
+* Adjusted the countrywide Homeowners model to meet state-specific requirements
+* Designed an Excel VBA program to automatically generate model performance plots from model outputs.
 
 # Education
 

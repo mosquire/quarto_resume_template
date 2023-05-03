@@ -81,13 +81,23 @@ $endif$
 \bigskip
 
 % Contact information
-\begin{tabular}{r l}
-    $for(contact)$
-        $for(contact/pairs)$
-        \textbf{$contact.key$} & $contact.value$
+\begin{tabular}{ll}
+    \begin{tabular}[t]{rl}
+        $for(contact)$
+            $for(contact/pairs)$
+            \textbf{$contact.key$} & $contact.value$
+            $endfor$
+            $sep$\\
         $endfor$
-        $sep$\\
-    $endfor$
+    \end{tabular}
+    \begin{tabular}[t]{rl}
+        $for(portfolio)$
+            $for(portfolio/pairs)$
+            \textbf{$portfolio.key$} & $portfolio.value$
+            $endfor$
+            $sep$\\
+        $endfor$
+    \end{tabular}
 \end{tabular}
 
 \section*{Skills}
