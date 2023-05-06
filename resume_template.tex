@@ -11,6 +11,7 @@
 % Define section heading style
 \usepackage{titlesec}
 \titleformat{\section}{\Large\bfseries\color{darkblue}}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{0.5\baselineskip}{0.5\baselineskip}
 
 % Using Open Sans as an approximation to Helvetica
 \usepackage{fontspec}
@@ -18,6 +19,11 @@
 
 % Hyperlinks
 \usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+}
 
 % Turn off section numbering
 \setcounter{secnumdepth}{0}
@@ -55,9 +61,11 @@
     \customsubsubsection{\companyname}{\daterange}
 }
 
+% Create tightlist command for quarto
 \providecommand{\tightlist}{%
     \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
+% remove paragraph indentation
 \setlength{\parindent}{0pt}
 
 % Set the hyphen penalties to discourage hyphenation
@@ -100,7 +108,7 @@ $endif$
     \end{tabular}
 \end{tabular}
 
-\section*{Skills}
+\section{Skills}
 \begin{tabular}{*{$skills/length$}{c}}
     $for(skills)$
         $for(skills/pairs)$
