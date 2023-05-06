@@ -2,10 +2,7 @@
 
 name: Build Resume PDF
 
-on:
-  push:
-    branches:
-      - 'main'
+on: [push, workflow_dispatch]
 
 jobs:  
   build_and_publish:
@@ -14,6 +11,12 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3.5.2
+        
+      - name: Check Quarto tools
+        run: |
+          quarto list tools
+          quarto install tinytex
+          quarto list tools
 
       - name: Render PDF
         run: quarto render ./resume.qmd
