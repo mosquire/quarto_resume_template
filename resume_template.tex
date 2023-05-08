@@ -10,7 +10,7 @@
 
 % Define section heading style
 \usepackage{titlesec}
-\titleformat{\section}{\Large\bfseries\color{darkblue}}{}{0em}{}[\titlerule]
+\titleformat{\section}{\large\bfseries\color{darkblue}}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{0.5\baselineskip}{0.5\baselineskip}
 
 % Using Open Sans as an approximation to Helvetica
@@ -41,9 +41,9 @@
 }
 % take subsection command and split the argument on the colon to pass into customsubsection
 \renewcommand{\subsection}[1]{
-    \StrBefore{#1}{:}[\companyname]%
-    \StrBehind{#1}{:}[\daterange]%
-    \customsubsection{\companyname}{\daterange}
+    \StrBefore{#1}{:}[\beforecolon]%
+    \StrBehind{#1}{:}[\aftercolon]%
+    \customsubsection{\beforecolon}{\aftercolon}
 }
 
 % custom subsubsection command that first arg on left and second arg on right
@@ -56,9 +56,9 @@
 }
 % take subsubsection command and split the argument on the colon to pass into customsubsubsection
 \renewcommand{\subsubsection}[1]{
-    \StrBefore{#1}{:}[\companyname]%
-    \StrBehind{#1}{:}[\daterange]%
-    \customsubsubsection{\companyname}{\daterange}
+    \StrBefore{#1}{:}[\beforecolon]%
+    \StrBehind{#1}{:}[\aftercolon]%
+    \customsubsubsection{\beforecolon}{\aftercolon}
 }
 
 % Create tightlist command for quarto
@@ -75,38 +75,45 @@
 % Remove page numbers
 \pagenumbering{gobble}
 
+\usepackage{graphicx}
+
 \begin{document}
 
 % Header
+\begin{center}
 {\Huge \textbf{$name$}}
 
 {\Large \textcolor{lightblue}{$title$}}
 
+% Contact information
+\begin{tabular}{*{$contact/length$}{l}}
+    $if(contact.location)$
+        \includegraphics[height=11pt]{logos/location.png} $contact.location$ &
+    $endif$
+    $if(contact.email)$
+        \includegraphics[height=11pt]{logos/mail.png} $contact.email$ &
+    $endif$
+    $if(contact.phone)$
+        \includegraphics[height=11pt]{logos/mobile.png} $contact.phone$
+    $endif$
+\end{tabular}
+
+\begin{tabular}{*{$portfolio/length$}{l}}
+    $if(portfolio.github)$
+        \includegraphics[height=11pt]{logos/github-mark.png} $portfolio.github$ &
+    $endif$
+    $if(portfolio.linkedin)$
+        \includegraphics[height=11pt]{logos/LI-In-Bug.png} $portfolio.linkedin$
+    $endif$
+\end{tabular}
+\end{center}
+
 $if(summary)$
-{\normalsize $summary$}
+\section{Summary}
+$summary$
 $endif$
 
 \bigskip
-
-% Contact information
-\begin{tabular}{ll}
-    \begin{tabular}[t]{rl}
-        $for(contact)$
-            $for(contact/pairs)$
-            \textbf{$contact.key$} & $contact.value$
-            $endfor$
-            $sep$\\
-        $endfor$
-    \end{tabular}
-    \begin{tabular}[t]{rl}
-        $for(portfolio)$
-            $for(portfolio/pairs)$
-            \textbf{$portfolio.key$} & $portfolio.value$
-            $endfor$
-            $sep$\\
-        $endfor$
-    \end{tabular}
-\end{tabular}
 
 \section{Skills}
 \begin{tabular}{*{$skills/length$}{c}}
