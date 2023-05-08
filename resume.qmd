@@ -5,15 +5,15 @@ format:
         font: Open Sans
         number-sections: false
 name: Morgan Squire, ACAS
-title: Data Scientist
+# title: Data Scientist
 summary: Innovative Data Scientist and Actuary with six years of experience modernizing and automating analytical processes. Passionate about implementing software development best practices into model development.
 contact:
-    - Location: Riverview, FL
-    - Phone: (555) 555-5555
-    - Email: first.last@domain.com
+    location: Riverview, FL
+    phone: (555) 555-5555
+    email: first.last@domain.com
 portfolio:
-    - LinkedIn: \href{https://www.linkedin.com/in/yournamehere/}{yournamehere}
-    - GitHub: \href{https://github.com/mosquire}{mosquire}
+    linkedin: \href{https://www.linkedin.com/in/yournamehere/}{yournamehere}
+    github: \href{https://github.com/mosquire}{mosquire}
 skills:
     - Languages:
         - Python
@@ -49,7 +49,7 @@ skills:
 
 ## USAA: 2016 - Present
 
-### Associate Actuary: 2020 - Present
+### Associate Actuary, 2020 - Present:
 
 * Overhauled the Homeowners loss models to incorporate claim type into claim surcharges to reduce subsidy
 * Led a team of 4 in the development of an internal Python package using H2O and scikit-learn
@@ -59,16 +59,16 @@ skills:
 * Established 14 virtual machines to enable a team of model developers to fit models on a 40 GB dataset in H2O
 * Presented complex technical improvements to executive leadership on multiple occasions
 
-### Actuarial Analyst: 2017 - 2020
+### Actuarial Analyst, 2017 - 2020:
 
-* Developed an advanced process for territorial smoothing that incorporated thin plate splines in a Generalized Additive Model in R
+* Developed an advanced process for territorial smoothing using thin-plate splines in a Generalized Additive Model in R
 * Coordinated with the Texas Department of Insurance to secure approval of a new capital allocation strategy
-* Designed and published an R package with tools for connecting to internal databases and estimating within-class and between-class variance
+* Designed and published an internal R package with tools for connecting to company databases and estimating within-class and between-class variance
 * Trained the modeling community of practice on R package development tailored to internal systems
 * Optimized deductible rating factors using R to calculate granular loss elimination ratios which enabled the rollout of new deductible options
-* Filed many rate changes in Homeowners, Renters, and Rental Property lines of business
+* Filed rate changes in Homeowners, Renters, and Rental Property lines of business in several states
 
-### Actuarial Modeling Intern: 2016
+### Actuarial Modeling Intern, 2016:
 
 * Adjusted the countrywide Homeowners model to meet state-specific requirements
 * Designed an Excel VBA program to automatically generate model performance plots from model outputs.
